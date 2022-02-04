@@ -1,0 +1,27 @@
+/* mug_cake recipe */
+
+--Select your favorite microwave safe mug
+SELECT dish
+FROM mug_cake.dishes
+WHERE dish = 'mug'
+	AND favorite = TRUE
+	AND microwave_safe = TRUE
+
+--Put all ingredients into mug except for Reeses
+INSERT INTO mug_cake.mug
+	(SELECT *
+	FROM mug_cake.ingredients
+	WHERE ingredient != 'reeses')
+
+--Mix 2tbsp of Reeses into batter
+INSERT INTO mug_cake.mug
+	(SELECT quantity * .67
+		, ingredient
+	FROM mug_cake.ingredients
+	WHERE ingredient = 'reeses')
+
+--Top batter with remaining 1tbsp of Reeses
+SELECT m.*||(i.ingredient * .33)
+FROM mug_cake.mug m
+LEFT JOIN mug_cake.ingredients i
+ON i.ingredient = m.ingredient

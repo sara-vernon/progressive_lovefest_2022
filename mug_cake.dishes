@@ -1,3 +1,5 @@
+/* mug_cake.dishes table */
+
 dish    | favorite | microwave_safe
 --------|----------|----------------
 plate   | TRUE	   | TRUE

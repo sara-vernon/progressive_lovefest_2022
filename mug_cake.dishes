@@ -1,0 +1,9 @@
+dish    | favorite | microwave_safe
+--------|----------|----------------
+plate   | TRUE	   | TRUE
+cup     | FALSE	   | TRUE
+bowl    | FALSE    | TRUE
+mug     | FALSE	   | FALSE
+mug     | TRUE     | TRUE
+mug     | FALSE	   | TRUE
+glass   | FALSE	   | FALSE

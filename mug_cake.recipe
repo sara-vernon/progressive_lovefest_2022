@@ -25,3 +25,4 @@ SELECT m.*||(i.ingredient * .33)
 FROM mug_cake.mug m
 LEFT JOIN mug_cake.ingredients i
 ON i.ingredient = m.ingredient
+WHERE i.ingredient = 'reeses'
